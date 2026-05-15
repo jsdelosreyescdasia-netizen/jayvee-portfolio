@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-label="Daily reports placeholder">
+  <rect width="1280" height="720" fill="#eaf1f6"/>
+  <rect width="150" height="720" fill="#111827"/>
+  <text x="22" y="58" fill="#fff" font-family="Arial, sans-serif" font-size="18" font-weight="700">Daily Report System</text>
+  <rect x="18" y="92" width="116" height="38" rx="8" fill="#0b8f82"/>
+  <text x="28" y="117" fill="#fff" font-family="Arial, sans-serif" font-size="14" font-weight="700">Daily Reports</text>
+  <text x="190" y="98" fill="#101827" font-family="Arial, sans-serif" font-size="30" font-weight="700">Daily Reports</text>
+  <rect x="190" y="138" width="900" height="78" rx="14" fill="#fff" stroke="#c8d6e2"/>
+  <rect x="214" y="166" width="420" height="34" rx="8" fill="#f7fafc" stroke="#c8d6e2"/>
+  <rect x="650" y="166" width="80" height="34" rx="8" fill="#0b8f82"/>
+  <rect x="190" y="238" width="900" height="126" rx="14" fill="#fff" stroke="#c8d6e2"/>
+  <rect x="214" y="262" width="852" height="34" fill="#f1f5f9" stroke="#101827"/>
+  <line x1="340" y1="262" x2="340" y2="330" stroke="#101827"/>
+  <line x1="540" y1="262" x2="540" y2="330" stroke="#101827"/>
+  <line x1="760" y1="262" x2="760" y2="330" stroke="#101827"/>
+  <text x="560" y="324" fill="#64748b" font-family="Arial, sans-serif" font-size="16">No reports yet.</text>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-label="Daily Report System login placeholder">
+  <rect width="1280" height="720" fill="#eaf1f6"/>
+  <rect x="438" y="92" width="404" height="300" rx="18" fill="#fff" stroke="#c8d6e2"/>
+  <text x="438" y="58" fill="#101827" font-family="Arial, sans-serif" font-size="30" font-weight="700">Employee Login</text>
+  <text x="472" y="136" fill="#101827" font-family="Arial, sans-serif" font-size="15" font-weight="700">Email</text>
+  <rect x="472" y="152" width="338" height="44" rx="8" fill="#f7fafc" stroke="#c8d6e2"/>
+  <text x="488" y="181" fill="#64748b" font-family="Arial, sans-serif" font-size="14">user@example.com</text>
+  <text x="472" y="232" fill="#101827" font-family="Arial, sans-serif" font-size="15" font-weight="700">Password</text>
+  <rect x="472" y="248" width="338" height="44" rx="8" fill="#e8f0fb" stroke="#c8d6e2"/>
+  <text x="488" y="276" fill="#64748b" font-family="Arial, sans-serif" font-size="14">••••••••••••</text>
+  <rect x="472" y="320" width="76" height="42" rx="8" fill="#0b8f82"/>
+  <text x="498" y="346" fill="#fff" font-family="Arial, sans-serif" font-size="15" font-weight="700">Login</text>
+</svg>
