@@ -6,8 +6,33 @@ const lightboxImage = lightbox?.querySelector("img");
 const lightboxCaption = lightbox?.querySelector("p");
 const lightboxClose = lightbox?.querySelector(".lightbox-close");
 const screenshotImages = document.querySelectorAll(".lightbox-image");
+const revealItems = document.querySelectorAll(
+  ".section, .stats article, .project-card, .project-detail, .about-grid article, .skill-list span, .timeline article, .contact"
+);
 
 year.textContent = new Date().getFullYear();
+
+if ("IntersectionObserver" in window) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.14 }
+  );
+
+  revealItems.forEach((item, index) => {
+    item.classList.add("reveal");
+    item.style.setProperty("--reveal-delay", `${Math.min(index % 6, 5) * 70}ms`);
+    observer.observe(item);
+  });
+} else {
+  revealItems.forEach((item) => item.classList.add("is-visible"));
+}
 
 buttons.forEach((button) => {
   button.addEventListener("click", () => {
