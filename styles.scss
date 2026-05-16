@@ -673,6 +673,48 @@ footer {
   font-weight: 900;
 }
 
+.tech-stack {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 18px;
+
+  article {
+    @include card;
+    display: grid;
+    gap: 6px;
+    min-height: 150px;
+    padding: 20px;
+    transition: transform 0.25s $ease-out, box-shadow 0.25s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 48px rgba($ink, 0.12);
+    }
+  }
+
+  span {
+    display: inline-grid;
+    width: 48px;
+    height: 48px;
+    place-items: center;
+    color: #fff;
+    background: linear-gradient(135deg, $teal, $blue);
+    border-radius: $radius;
+    font-weight: 900;
+  }
+
+  strong {
+    font-size: 1rem;
+  }
+
+  small {
+    color: $muted;
+    line-height: 1.45;
+  }
+}
+
 .project-links {
   display: flex;
   flex-wrap: wrap;
@@ -680,7 +722,8 @@ footer {
 }
 
 .project-links {
-  a {
+  a,
+  button {
     display: inline-flex;
     min-height: 34px;
     align-items: center;
@@ -690,6 +733,8 @@ footer {
     background: rgba(#fff, 0.82);
     border: 1px solid rgba($teal, 0.22);
     border-radius: $radius;
+    cursor: pointer;
+    font: inherit;
     font-size: 0.84rem;
     font-weight: 900;
     transition: transform 0.2s $ease-out, box-shadow 0.2s ease, color 0.2s ease, background 0.2s ease;
@@ -701,6 +746,12 @@ footer {
       box-shadow: 0 10px 22px rgba($teal-dark, 0.16);
     }
   }
+}
+
+.project-detail-button {
+  color: #fff !important;
+  background: linear-gradient(135deg, $ink, #283443) !important;
+  border-color: transparent !important;
 }
 
 .project-detail {
@@ -858,6 +909,122 @@ footer {
   }
 }
 
+.project-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 110;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba($ink, 0.72);
+  backdrop-filter: blur(10px);
+
+  &.is-open {
+    display: flex;
+  }
+}
+
+.project-modal-panel {
+  position: relative;
+  width: min(720px, 94vw);
+  padding: clamp(24px, 4vw, 38px);
+  background:
+    linear-gradient(135deg, rgba($teal, 0.08), transparent 42%),
+    #fff;
+  border: 1px solid rgba(#fff, 0.7);
+  border-radius: $radius;
+  box-shadow: 0 32px 90px rgba(#000, 0.26);
+  animation: soft-scale 0.28s $ease-out both;
+
+  h2 {
+    margin-bottom: 14px;
+    font-size: clamp(2rem, 4vw, 3rem);
+  }
+
+  > p:not(.eyebrow) {
+    margin: 0;
+    color: $muted;
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  min-height: 40px;
+  padding: 8px 12px;
+  color: $ink;
+  background: rgba(#fff, 0.88);
+  border: 1px solid $line;
+  border-radius: $radius;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 900;
+  transition: transform 0.2s $ease-out, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba($ink, 0.12);
+  }
+}
+
+.modal-meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 22px;
+
+  div {
+    padding: 15px;
+    background: rgba($paper, 0.76);
+    border: 1px solid $line;
+    border-radius: $radius;
+  }
+
+  strong {
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  span {
+    color: $muted;
+    font-size: 0.92rem;
+  }
+}
+
+.modal-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+
+  a {
+    display: inline-flex;
+    min-height: 42px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 14px;
+    color: $ink;
+    background: rgba(#fff, 0.82);
+    border: 1px solid rgba($ink, 0.15);
+    border-radius: $radius;
+    font-weight: 900;
+    transition: transform 0.2s $ease-out, box-shadow 0.2s ease, background 0.2s ease;
+
+    &:first-child {
+      color: #fff;
+      background: linear-gradient(135deg, $teal, $teal-dark);
+      border-color: transparent;
+    }
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 26px rgba($ink, 0.12);
+    }
+  }
+}
+
 .split {
   display: grid;
   grid-template-columns: minmax(0, 0.68fr) minmax(280px, 0.32fr);
@@ -1001,9 +1168,14 @@ footer {
 
   .stats,
   .project-grid,
+  .tech-stack,
   .about-grid,
   .timeline {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .modal-meta {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -1045,6 +1217,7 @@ footer {
 
   .stats,
   .project-grid,
+  .tech-stack,
   .about-grid,
   .screenshot-grid,
   .project-card,

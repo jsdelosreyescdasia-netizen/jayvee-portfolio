@@ -40,6 +40,7 @@
         </p>
         <div class="hero-actions">
           <a class="button primary" href="#projects">View Projects</a>
+          <a class="button secondary" href="assets/Jayvee-De-Los-Reyes-Resume.pdf" download>Download Resume</a>
           <a class="button secondary" href="#contact">Contact Me</a>
         </div>
       </div>
@@ -107,7 +108,7 @@
       </div>
 
       <div class="project-grid">
-        <article class="project-card" data-category="website">
+        <article class="project-card" data-category="website" data-project="cms">
           <div class="project-thumb web video-thumb">
             <video autoplay muted loop playsinline preload="metadata" aria-label="Company Website CMS preview video">
               <source src="assets/projects/cmswebsite.mp4" type="video/mp4">
@@ -134,11 +135,12 @@
               <a href="https://web-production-a45aa.up.railway.app/" target="_blank" rel="noreferrer">Live Demo</a>
               <a href="https://github.com/jsdelosreyescdasia-netizen" target="_blank" rel="noreferrer">GitHub Profile</a>
               <a href="#company-cms-video">View Video</a>
+              <button class="project-detail-button" type="button" data-project-open="cms">Details</button>
             </div>
           </div>
         </article>
 
-        <article class="project-card" data-category="system">
+        <article class="project-card" data-category="system" data-project="dtr">
           <div class="project-thumb inventory">
             <span>DTR</span>
           </div>
@@ -162,11 +164,12 @@
               <a href="http://cdasiadtrsystem.page.gd/login" target="_blank" rel="noreferrer">Live Demo</a>
               <a href="https://github.com/jsdelosreyescdasia-netizen" target="_blank" rel="noreferrer">GitHub Profile</a>
               <a href="#dtr-system">Screenshots</a>
+              <button class="project-detail-button" type="button" data-project-open="dtr">Details</button>
             </div>
           </div>
         </article>
 
-        <article class="project-card" data-category="ecommerce">
+        <article class="project-card" data-category="ecommerce" data-project="shop">
           <div class="project-thumb dashboard video-thumb">
             <video autoplay muted loop playsinline preload="metadata" aria-label="JSD Shop ecommerce preview video">
               <source src="assets/projects/ecomerce.mp4" type="video/mp4">
@@ -193,11 +196,12 @@
               <a href="https://web-production-47122.up.railway.app/" target="_blank" rel="noreferrer">Live Demo</a>
               <a href="https://github.com/jsdelosreyescdasia-netizen" target="_blank" rel="noreferrer">GitHub Profile</a>
               <a href="#jsd-shop-video">View Video</a>
+              <button class="project-detail-button" type="button" data-project-open="shop">Details</button>
             </div>
           </div>
         </article>
 
-        <article class="project-card" data-category="system">
+        <article class="project-card" data-category="system" data-project="report">
           <div class="project-thumb report">
             <div class="mock-report" aria-hidden="true">
               <div class="mock-sidebar"></div>
@@ -229,6 +233,7 @@
               <a href="https://app-production-aed1.up.railway.app/login" target="_blank" rel="noreferrer">Live Demo</a>
               <a href="https://github.com/jsdelosreyescdasia-netizen" target="_blank" rel="noreferrer">GitHub Profile</a>
               <a href="#daily-report-system">Screenshots</a>
+              <button class="project-detail-button" type="button" data-project-open="report">Details</button>
             </div>
           </div>
         </article>
@@ -335,6 +340,28 @@
         <p class="eyebrow">Toolkit</p>
         <h2>Skills for building real Laravel applications.</h2>
       </div>
+      <div class="tech-stack" aria-label="Main technologies">
+        <article>
+          <span>Lv</span>
+          <strong>Laravel</strong>
+          <small>MVC, routes, controllers, Blade</small>
+        </article>
+        <article>
+          <span>PHP</span>
+          <strong>PHP</strong>
+          <small>Backend logic and forms</small>
+        </article>
+        <article>
+          <span>DB</span>
+          <strong>MySQL</strong>
+          <small>Relational database design</small>
+        </article>
+        <article>
+          <span>UI</span>
+          <strong>HTML, SCSS, JS</strong>
+          <small>Responsive frontend interfaces</small>
+        </article>
+      </div>
       <div class="skill-list">
         <span>Laravel MVC</span>
         <span>PHP</span>
@@ -382,6 +409,7 @@
       </div>
       <div class="contact-actions">
         <a class="button primary" href="mailto:delosreyesjayvee13@gmail.com">Email Me</a>
+        <a class="button secondary" href="assets/Jayvee-De-Los-Reyes-Resume.pdf" download>Resume</a>
         <a class="button secondary" href="https://github.com/jsdelosreyescdasia-netizen" target="_blank" rel="noreferrer">GitHub</a>
       </div>
     </section>
@@ -391,6 +419,17 @@
     <button class="lightbox-close" type="button" aria-label="Close screenshot preview">Close</button>
     <img src="" alt="">
     <p></p>
+  </div>
+
+  <div class="project-modal" id="project-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="project-modal-panel">
+      <button class="modal-close" type="button" aria-label="Close project details">Close</button>
+      <p class="eyebrow" id="modal-type"></p>
+      <h2 id="modal-title"></h2>
+      <p id="modal-description"></p>
+      <div class="modal-meta" id="modal-meta"></div>
+      <div class="modal-actions" id="modal-actions"></div>
+    </div>
   </div>
 
   <footer>
