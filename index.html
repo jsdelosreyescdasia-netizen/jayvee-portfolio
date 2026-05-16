@@ -103,7 +103,7 @@
         <button class="filter-button active" type="button" data-filter="all">All</button>
         <button class="filter-button" type="button" data-filter="website">Websites</button>
         <button class="filter-button" type="button" data-filter="system">Systems</button>
-        <button class="filter-button" type="button" data-filter="dashboard">Dashboards</button>
+        <button class="filter-button" type="button" data-filter="ecommerce">E-Commerce</button>
       </div>
 
       <div class="project-grid">
@@ -166,29 +166,32 @@
           </div>
         </article>
 
-        <article class="project-card" data-category="dashboard">
-          <div class="project-thumb dashboard">
-            <span>Admin</span>
+        <article class="project-card" data-category="ecommerce">
+          <div class="project-thumb dashboard video-thumb">
+            <video autoplay muted loop playsinline preload="metadata" aria-label="JSD Shop ecommerce preview video">
+              <source src="assets/projects/ecomerce.mp4" type="video/mp4">
+            </video>
+            <span>Shop Video</span>
           </div>
           <div class="project-content">
             <div>
-              <p class="project-type">Admin Dashboard</p>
-              <h3>Website Admin Panel</h3>
-              <p>An admin dashboard concept focused on secure access, CRUD management, organized records, and clean interfaces for maintaining website or system data.</p>
+              <p class="project-type">Laravel E-Commerce Website</p>
+              <h3>JSD Shop</h3>
+              <p>A Laravel online shop for browsing curated products, tracking stock, placing orders, viewing order history, and managing shop content through an admin CMS.</p>
               <ul class="project-features">
-                <li>Authentication and protected admin pages</li>
-                <li>Create, update, search, and manage records</li>
-                <li>Reusable dashboard structure for Laravel systems</li>
+                <li>Product catalog with category browsing</li>
+                <li>Cart, checkout, and order tracking flow</li>
+                <li>Admin CMS for products, stock, and orders</li>
               </ul>
             </div>
             <ul class="tags" aria-label="Technologies">
               <li>Laravel</li>
-              <li>Auth</li>
-              <li>CRUD</li>
+              <li>MySQL</li>
+              <li>E-Commerce</li>
             </ul>
             <div class="project-links" aria-label="Project links">
-              <a href="#" target="_blank" rel="noreferrer">Live Demo</a>
               <a href="https://github.com/jsdelosreyescdasia-netizen" target="_blank" rel="noreferrer">GitHub Profile</a>
+              <a href="#jsd-shop-video">View Video</a>
             </div>
           </div>
         </article>
@@ -244,6 +247,24 @@
         <div class="video-frame">
           <video controls preload="metadata" playsinline>
             <source src="assets/projects/cmswebsite.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </article>
+
+      <article class="project-detail video-detail" id="jsd-shop-video">
+        <div class="project-detail-copy">
+          <p class="eyebrow">Project video</p>
+          <h3>JSD Shop E-Commerce Demo</h3>
+          <p>
+            A walkthrough of the JSD Shop website showing the storefront,
+            product discovery, cart and order flow, tracking pages, and Laravel
+            CMS features for managing products, stock, orders, and shop content.
+          </p>
+        </div>
+        <div class="video-frame">
+          <video controls preload="metadata" playsinline>
+            <source src="assets/projects/ecomerce.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
         </div>
