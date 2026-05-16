@@ -6,7 +6,7 @@ Calubcub 2nd, San Juan, Batangas
 09974975666  
 delosreyesjayvee13@gmail.com  
 GitHub: https://github.com/jsdelosreyescdasia-netizen  
-Portfolio: https://aware-cooperation-production-6381.up.railway.app
+Portfolio: https://aware-cooperation-production-6381.up.railway.app/
 
 ## Professional Summary
 
