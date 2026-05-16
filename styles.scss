@@ -94,6 +94,7 @@ html {
 
 body {
   margin: 0;
+  overflow-x: hidden;
   color: $ink;
   background:
     radial-gradient(circle at 8% 8%, rgba($teal, 0.12), transparent 28rem),
@@ -928,6 +929,8 @@ footer {
 .project-modal-panel {
   position: relative;
   width: min(720px, 94vw);
+  max-height: min(780px, 88vh);
+  overflow-y: auto;
   padding: clamp(24px, 4vw, 38px);
   background:
     linear-gradient(135deg, rgba($teal, 0.08), transparent 42%),
@@ -1176,6 +1179,47 @@ footer {
 
   .modal-meta {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .stats,
+  .project-grid,
+  .tech-stack,
+  .about-grid,
+  .screenshot-grid,
+  .project-card,
+  .timeline {
+    grid-template-columns: 1fr;
+  }
+
+  .project-detail {
+    padding: 20px;
+  }
+
+  .project-modal {
+    align-items: flex-start;
+    overflow-y: auto;
+    padding: 14px;
+  }
+
+  .project-modal-panel {
+    width: 100%;
+    max-height: none;
+    margin: 10px 0;
+    padding: 24px 18px;
+  }
+
+  .modal-actions a,
+  .project-links a,
+  .project-links button {
+    width: 100%;
   }
 }
 
